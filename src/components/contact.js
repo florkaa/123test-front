@@ -22,7 +22,7 @@ class Contact extends Component {
     }
 	render() {
 	    return (
-	    	<div id="contact" className="scrollable"> 
+	    	<div id="contact"> 
 	    		<h1>Get in touch!</h1>
 	    		<form onSubmit={this.handleSubmit.bind(this)}>
 	    			<input type="text" placeholder="Name" name="name" value={this.state.name} onChange={this.handleInput.bind(this)} />

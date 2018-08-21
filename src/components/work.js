@@ -26,7 +26,7 @@ class Work extends Component {
 					subtitle:'amet consetetur sadipscing elitr'
 					}]
 	    return (
-	    	<div id="work" className="scrollable">
+	    	<div id="work">
 	    		<div className="gallery">
 	    			{work.map((value, i) => {
 			            return (

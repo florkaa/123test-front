@@ -14,7 +14,7 @@ const SkillBox = ({img, title, text}) => {
 class About extends Component {
 	render() {
 	    return (
-		    <div id="about-me" className="scrollable">
+		    <div id="about-me">
 				<section className="bio">
 					<p className="about-title title-principal">LITEBOX TEST</p>
 					<p className="about-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
