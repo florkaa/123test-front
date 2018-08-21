@@ -4,7 +4,7 @@ import About from './components/aboutme';
 import Work from './components/work';
 import Contact from './components/contact';
 import Footer from './components/footer';
-import './css/general.css'
+import './css/styles.css'      		
 
 class App extends Component {
 	render() {

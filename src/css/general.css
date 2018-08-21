@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Roboto|Roboto+Slab|Open+Sans:400,700');
 
-/* 
-font-family: 'Roboto', sans-serif;
-font-family: 'Roboto Slab', serif;
-font-family: 'PT Sans Narrow', sans-serif;
-*/
-
 *{
 	box-sizing: border-box;
 	margin: 0 auto;
@@ -19,20 +13,25 @@ button:focus, input:focus, textarea:focus{
 	outline: none;
 }
 
+.scroll{
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	z-index: 100;
+}
 
 header{
 	background-image: url("../img/7.jpg");
     background-color: rgba(255, 255, 255, 0.4);
     background-blend-mode: lighten;
 	background-size: cover;
-	height: 90vh;
+	height: 500px;
 	width: 100%;
 	color: #fff;
 }
-
 nav{
 	width: 80%;
-	padding: 60px 0;
+	padding: 60px 0 30px;
 	display: flex;
 	justify-content: space-between;
 	font-family: 'PT Sans Narrow', sans-serif;
@@ -61,17 +60,17 @@ nav .links a:active {
 
 .description{
 	text-align: center;
-    height: 50vh;
+    height: 250px;
     display: flex;
     flex-flow: column;
     justify-content: center;
 }
 .description h1{
-	width: 35%;
+	width: auto;
 	font-family: 'Roboto Slab', serif;
 	font-size: 30px;
 	letter-spacing: 0.09em;
-	padding-bottom: 24px;
+	padding: 0 30px 24px;
 	border-bottom: 1px solid #fff;
 }
 .description h3{
@@ -79,12 +78,7 @@ nav .links a:active {
 	font-size: 15px;
 	margin-top: 10px;
 }
-
-.button-header{
-	position: absolute;
-	bottom: 3vh;
-	left: 50%;
-	transform: translate(-50%, -50%);
+.button{
 	font-family: 'Roboto Slab', serif;
 	color: #fff;
 	font-size: 13px;
@@ -92,13 +86,20 @@ nav .links a:active {
 	width: 200px;
 	padding: 14px 0;
 	background-color: #e84c3d;
-	border: 5px solid black;
+	border: 5px solid #e84c3d;
 }
-
+.button-header{
+	position: absolute;
+	top: 500px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #e84c3d;
+	background-clip: padding-box;
+	border: 5px solid rgba(232,76,61, 0.5);
+}
 #main{
 	width: 80%;
 }
-
 #about-me, #work{
 	padding: 75px 0;
 	border-bottom: 1px solid #e6e8e7;
@@ -106,7 +107,7 @@ nav .links a:active {
 }
 
 #about-me{
-	margin-top: 150px;
+	margin-top: 75px;
 }
 .bio, .skills{
 	width: 80%;
@@ -114,14 +115,13 @@ nav .links a:active {
 	font-family: 'Open Sans', sans-serif;
 	color: #96a6a5;
 }
-
 .about-title{
 	color: #e54e3b;
 	font-weight: 700;
 }
 .title-principal{
 	font-size: 25px;
-	padding-bottom: 53px;
+	margin-bottom: 53px;
 }
 .about-text{
 	font-size: 14px;
@@ -152,7 +152,6 @@ nav .links a:active {
 	flex-flow: row wrap;
 	justify-content: space-between;
 }
-
 .photo-box {
 	position: relative;
 	width: 40%;
@@ -163,18 +162,20 @@ nav .links a:active {
 	height: 100%;
 	opacity: 0.7;
 }
-
 .photo-overlay {
-	position: absolute; 
 	bottom:0;
 	transition: .5s ease;
 	opacity:0;
-	color: #fff;
 }
 .photo-box:hover .photo-overlay, .photo-box:hover .work-image{
   opacity: 1;
 }
-
+.photo-zoom{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	text-align: right;
+}
 .photo-overlay .photo-title{
 	position: absolute; 
 	bottom: 0; 
@@ -184,27 +185,46 @@ nav .links a:active {
 	font-size: 20px;
 	padding: 20px;
 	border-top: 5px solid pink;
+	background-clip: padding-box;
+	border-top: 5px solid rgba(232,76,61, 0.5);
 }
 
-.view-more{
-	padding: 20px 27px;
-	background: #e84c3d;
-	text-transform: uppercase;
-	vertical-align: middle;
-	font-family: 'Roboto Slab', serif;
+.photo-zoom img{
+	width: 50px;
 }
-button.view-more{
-	width: 20%;
+
+.photo-title{
+	text-align: left;
+}
+
+.gallery-title{
+	font-family: 'Roboto Slab', serif;
 	color: #fff;
-	font-size: 14px;
-	border:none;
-	margin-top: 20px;
+	font-size: 17px;
+}
+.gallery-subtitle{
+	font-family: 'Open Sans', sans-serif;
+	color: #963a2d;
+	font-size: 11px;
+}
+.view-more{
+	display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 14px 20px;
+}
+.view-more a{
+	margin: 0;
+	width: auto;
+}
+.view-more img{
+	margin: 0;
+	max-width: 18px;
 }
 
 #contact{
 	text-align: center;
 	padding: 75px 0;
-	border-bottom: 1px solid #e6e8e7;
 }
 
 #contact h1{
@@ -225,8 +245,11 @@ button.view-more{
 	padding: 20px;
 	font-size: 18px;
 	background-color: #e4e8e9;
-	color: #cfcfd1;
+	color: #77797a;
 	border: none;
+}
+#contact input::placeholder, #contact textarea::placeholder{
+	color: #cfd1d0;
 }
 
 #contact input{
@@ -241,10 +264,19 @@ button.view-more{
 	resize: none;
 }
 
+.form-status{
+    margin: 10px 0 20px;
+    text-align: right;
+    height: 10px;
+    color: #77797a;
+    font-family: 'Roboto', sans-serif;
+}
+
 footer{
 	position: relative;
-	height: 240px;
 	background-color: #e84c3d;
+	padding: 111px;
+	text-align: right;
 }
 .social{
 	width: 63%;
@@ -254,13 +286,107 @@ footer{
 	transform: translate(-50%, -50%);
 	display: flex;
 	justify-content: space-between;
+	text-align: center;
 }
 
 .social img{
 	width: 88px;
 	max-height: 88px; 
-	border: 5px solid #e84c3d;
+	background-clip: padding-box;
+	border: 5px solid rgba(232,76,61, 0.5);
 }
 
+.menu-mobile{
+	width: 70%;
+	background-color: #e84c3d;
+	position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+    z-index: 1;
+}
 
+.menu-button{
+	background-color:rgba(232,76,61, 0.5);
+	border: none;
+	position: absolute;
+	top: 10px;
+    right: 10px;
+	width: 50px;
+    height: 50px;
+    padding: 0;
+}
+.menu-button img{
+	width: 20px;
+	vertical-align: middle;
+}
+.links-mobile{
+	background-color: #e84c3d;
+	height: 100vh;
+    padding: 60px;
+}
 
+.links-mobile a{
+    font-size: 18px;
+    display: block;
+    margin: 5px 0;
+}
+
+@media all and (max-width: 690px){
+	#main{
+		width: 95%;
+		margin-top: 30px;
+	}
+	#about-me{
+		margin-top:0;
+	}
+	.skills{
+		flex-direction: column;
+		margin-top: 20px;
+	}
+	.skill-box{
+		width: 95%;
+		margin-top: 20px;
+	}
+	.skill-box .about-title{
+    	padding: 10px 0;
+	}
+	.photo-box{
+		width: 48%;
+    	margin-bottom: 35px;
+	}
+	#contact form{
+		width: 80%;
+	}
+	#contact input{
+    	width: 49%;
+	}
+	#contact textarea{
+		height: 200px;
+	}
+	#about-me, #work, #contact {
+    	padding: 30px 0;
+	}
+	.description h1{
+		width: 95%;
+		font-size: 23px;
+	}
+	.title-principal{
+		margin-bottom: 30px;
+	}
+	.photo-box{
+		width: 80%;
+	}
+	#contact form{
+		margin-top: 20px;
+	}
+	footer{
+		margin-top: 20px;
+	}
+	.social{
+		width: 100%;
+	}
+	.scroll{
+		display: none;	
+	}
+}

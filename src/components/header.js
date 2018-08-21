@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Scroll from 'react-scroll-to-element';
 import Nav from './nav';
 
 class Header extends Component {
@@ -12,7 +13,9 @@ class Header extends Component {
 			    		<h3>Frontend Design | UX/UI Design</h3>
 			    	</section>
 			    </header>
-			    <button className="button-header">Go ahead</button>
+			    <Scroll type="id" element="main">
+            		<button className="button button-header">Go ahead</button>
+          		</Scroll>
 		    </div>
 	    );
 	}

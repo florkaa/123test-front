@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Roboto|Roboto+Slab|Open+Sans:400,700');
+
+@Roboto: 'Roboto', sans-serif;
+@PT-Sans: 'PT Sans Narrow', sans-serif;
+@Roboto-Slab: 'Roboto Slab', serif;
+@Open-Sans: 'Open Sans', sans-serif;
+
+@general-width: 80%;
+@principal-red: #e84c3d;
+
+@690px: ~"all and (max-width: 690px)";
+
+.mixin-flex(){
+	display: flex;
+	justify-content: space-between;
+}
+
+.section-separator(){
+	padding: 75px 0;
+	border-bottom: 1px solid #e6e8e7;
+	@media @690px{
+		padding: 30px 0;
+	}	
+}
+
+.button-border(){
+	background-color: @principal-red;
+	background-clip: padding-box;
+	border: 5px solid rgba(232,76,61, 0.5);
+}
+
+.form-style(){
+	font-family: @Roboto-Slab;
+	padding: 20px;
+	font-size: 18px;
+	background-color: #e4e8e9;
+	color: #77797a;
+	border: none;
+}
+
+*{
+	box-sizing: border-box;
+	margin: 0 auto;
+	width: 100%;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+button:focus, input:focus, textarea:focus{
+	outline: none;
+}
+
+header{
+	background-image: url("../img/7.jpg");
+    background-color: rgba(255, 255, 255, 0.4);
+    background-blend-mode: lighten;
+	background-size: cover;
+	height: 500px;
+	width: 100%;
+	color: #fff;
+}
+nav{
+	.mixin-flex();
+	width: @general-width;
+	padding: 60px 0 30px;
+	font-family: @PT-Sans;
+	font-size: 15px;
+	text-transform: uppercase;
+	& .links{
+		text-align: right;
+		& a{
+			padding: 0 15px;
+			&:link {
+			    color: #fff;
+			}
+			&:visited {
+			    color: #e64c44;
+			}
+			&:hover {
+			    color: #e64c44;
+			}
+			&:active {
+			    color: #fff;
+			    text-decoration: underline;
+			}
+		}
+	}
+}
+.description{
+	text-align: center;
+    height: 250px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+	& h1{
+		width: auto;
+		font-family: @Roboto-Slab;
+		font-size: 30px;
+		letter-spacing: 0.09em;
+		padding: 0 30px 24px;
+		border-bottom: 1px solid #fff;
+		@media @690px{
+			width: 95%;
+			font-size: 23px;
+		}
+	}
+	& h3{
+		font-family: @Roboto;
+		font-size: 15px;
+		margin-top: 10px;
+	}
+}
+.button{
+	font-family: @Roboto-Slab;
+	color: #fff;
+	font-size: 13px;
+	text-transform: uppercase;
+	width: 200px;
+	padding: 14px 0;
+	background-color: @principal-red;
+	border: 5px solid @principal-red;
+}
+.button-header{
+	.button-border();
+	position: absolute;
+	top: 500px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#main{
+	width: @general-width;
+	@media @690px{
+		width: 95%;
+		margin-top: 30px;
+	}
+}
+#about-me, #work{
+	.section-separator();
+	min-height: 100vh;
+}
+#about-me{
+	margin-top: 75px;
+	@media @690px{
+		margin-top:0;
+	}
+}
+.bio, .skills{
+	width: @general-width;
+	text-align: center;
+	font-family: @Open-Sans;
+	color: #96a6a5;
+}
+.about-title{
+	color: #e54e3b;
+	font-weight: 700;
+}
+.title-principal{
+	font-size: 25px;
+	margin-bottom: 53px;
+	@media @690px{
+		margin-bottom: 30px;
+	}
+}
+.about-text{
+	font-size: 14px;
+	line-height: 26px;
+}
+
+.skills{
+	.mixin-flex();
+	width: 100%;
+ 	margin-top: 80px;
+	& .skill-box{
+	width: 25%;
+		& .about-title{
+			padding: 30px 0;
+		}
+		& img{
+			width: auto;
+			max-height: 65px;
+		}
+	}
+	@media @690px{
+		flex-direction: column;
+		margin-top: 20px;
+		& .skill-box{
+			width: 95%;
+			margin-top: 20px;
+			& .about-title{
+			    padding: 10px 0;
+			}
+		}
+	}
+}
+#work{
+	text-align: center;
+	& .gallery{
+		.mixin-flex();
+		flex-flow: row wrap;
+		& .photo-box {
+			position: relative;
+			width: 40%;
+			margin-bottom: 55px;
+			&:hover{
+				& .photo-overlay, .work-image{
+					opacity: 1;
+				}
+			}
+			& .work-image {
+				display: block;
+				height: 100%;
+				opacity: 0.7;
+			}
+			& .photo-overlay {
+				bottom:0;
+				transition: .5s ease;
+				opacity:0;
+				& .photo-title{
+					position: absolute; 
+					bottom: 0; 
+					left:0;
+					background-color: @principal-red;
+					width: 100%;
+					font-size: 20px;
+					padding: 20px;
+					background-color: @principal-red;
+					background-clip: padding-box;
+					border-top: 5px solid rgba(232,76,61, 0.5);
+					text-align: left;
+					& .gallery-title{
+						font-family: @Roboto-Slab;
+						color: #fff;
+						font-size: 17px;
+					}
+					& .gallery-subtitle{
+						font-family: @Open-Sans;
+						color: #963a2d;
+						font-size: 11px;
+					}
+				}
+				& .photo-zoom{
+					position: absolute;
+					top: 20px;
+					right: 20px;
+					text-align: right;
+					& img{
+						width: 50px;
+					}
+				}
+			}
+			@media @690px{
+				width: @general-width;
+		    	margin-bottom: 35px;
+		    	& .photo-zoom{
+		    		display: none;
+		    	}
+			}
+		}
+	}
+}
+.view-more{
+	display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 14px 20px;
+	& a{
+		margin: 0;
+		width: auto;
+	}
+	& img{
+		margin: 0;
+		max-width: 18px;
+	}
+}
+
+#contact{
+	text-align: center;
+	padding: 75px 0;
+	& h1{
+		font-family: @Roboto-Slab;
+		color: #eb4843;
+	}
+	& form{
+		.mixin-flex();
+		width: 60%;
+		flex-flow: row wrap;
+		margin: 75px auto;
+		& input, & textarea{
+			.form-style()
+		}
+		& input{
+			width: 45%;
+			margin: 0;
+		}
+		& textarea{
+			width: 100%;
+			margin-top: 27px;
+			height: 250px;
+			resize: none;
+		}
+		& input::placeholder, textarea::placeholder{
+			color: #cfd1d0;
+		}
+		.form-status{
+		    margin: 10px 0 20px;
+		    text-align: right;
+		    height: 10px;
+		    color: #77797a;
+		    font-family: @Roboto;
+		}
+	}
+	@media @690px{
+	padding: 30px 0;
+		& form{
+			width: @general-width;
+			margin-top: 20px;
+			& input{
+	    		width: 49%;
+			}
+			& textarea{
+				height: 200px;
+			}
+		}
+	}
+}
+
+footer{
+	position: relative;
+	background-color: @principal-red;
+	padding: 111px;
+	text-align: right;
+	& .social{
+		.mixin-flex();
+		width: 63%;
+		position: absolute;
+		bottom: 130px;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		& img{
+			.button-border();
+			width: 88px;
+			max-height: 88px; 
+		}
+	}
+	@media @690px{
+		margin-top: 20px;
+		& .social{
+			width: 100%;
+		}
+	}
+}
+
+.menu-mobile{
+	width: 70%;
+	background-color: @principal-red;
+	position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+    z-index: 1;
+	& .menu-button{
+		background-color:rgba(232,76,61, 0.5);
+		border: none;
+		position: absolute;
+		top: 10px;
+	    right: 10px;
+		width: 50px;
+	    height: 50px;
+	    padding: 0;
+		& img{
+			width: 20px;
+			vertical-align: middle;
+		}
+	}
+	& .links-mobile{
+		background-color: @principal-red;
+		height: 79vh;
+	    padding: 60px;
+		& a{
+		    font-size: 18px;
+		    display: block;
+		    margin: 5px 0;
+		}
+	}
+}

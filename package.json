@@ -7,7 +7,9 @@
     "gh-pages": "^1.2.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-scripts": "1.1.4"
+    "react-medium-image-zoom": "^3.0.13",
+    "react-scripts": "1.1.4",
+    "react-scroll-to-element": "^0.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,0 +1,413 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0e.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOUuhs.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'PT Sans Narrow';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans Narrow'), local('PTSans-Narrow'), url(https://fonts.gstatic.com/s/ptsansnarrow/v8/BngRUXNadjH0qYEzV7ab-oWlsbCGwRg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'), url(https://fonts.gstatic.com/s/robotoslab/v7/BngMUXZYTXPIvIBgJJSb6ufN5qA.ttf) format('truetype');
+}
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+button:focus,
+input:focus,
+textarea:focus {
+  outline: none;
+}
+header {
+  background-image: url("../img/7.jpg");
+  background-color: rgba(255, 255, 255, 0.4);
+  background-blend-mode: lighten;
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+  color: #fff;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  padding: 60px 0 30px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+nav .links {
+  text-align: right;
+}
+nav .links a {
+  padding: 0 15px;
+}
+nav .links a:link {
+  color: #fff;
+}
+nav .links a:visited {
+  color: #e64c44;
+}
+nav .links a:hover {
+  color: #e64c44;
+}
+nav .links a:active {
+  color: #fff;
+  text-decoration: underline;
+}
+.description {
+  text-align: center;
+  height: 250px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.description h1 {
+  width: auto;
+  font-family: 'Roboto Slab', serif;
+  font-size: 30px;
+  letter-spacing: 0.09em;
+  padding: 0 30px 24px;
+  border-bottom: 1px solid #fff;
+}
+@media all and (max-width: 690px) {
+  .description h1 {
+    width: 95%;
+    font-size: 23px;
+  }
+}
+.description h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  margin-top: 10px;
+}
+.button {
+  font-family: 'Roboto Slab', serif;
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  width: 200px;
+  padding: 14px 0;
+  background-color: #e84c3d;
+  border: 5px solid #e84c3d;
+}
+.button-header {
+  background-color: #e84c3d;
+  background-clip: padding-box;
+  border: 5px solid rgba(232, 76, 61, 0.5);
+  position: absolute;
+  top: 500px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#main {
+  width: 80%;
+}
+@media all and (max-width: 690px) {
+  #main {
+    width: 95%;
+    margin-top: 30px;
+  }
+}
+#about-me,
+#work {
+  padding: 75px 0;
+  border-bottom: 1px solid #e6e8e7;
+  min-height: 100vh;
+}
+@media all and (max-width: 690px) {
+  #about-me,
+  #work {
+    padding: 30px 0;
+  }
+}
+#about-me {
+  margin-top: 75px;
+}
+@media all and (max-width: 690px) {
+  #about-me {
+    margin-top: 0;
+  }
+}
+.bio,
+.skills {
+  width: 80%;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #96a6a5;
+}
+.about-title {
+  color: #e54e3b;
+  font-weight: 700;
+}
+.title-principal {
+  font-size: 25px;
+  margin-bottom: 53px;
+}
+@media all and (max-width: 690px) {
+  .title-principal {
+    margin-bottom: 30px;
+  }
+}
+.about-text {
+  font-size: 14px;
+  line-height: 26px;
+}
+.skills {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 80px;
+}
+.skills .skill-box {
+  width: 25%;
+}
+.skills .skill-box .about-title {
+  padding: 30px 0;
+}
+.skills .skill-box img {
+  width: auto;
+  max-height: 65px;
+}
+@media all and (max-width: 690px) {
+  .skills {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .skills .skill-box {
+    width: 95%;
+    margin-top: 20px;
+  }
+  .skills .skill-box .about-title {
+    padding: 10px 0;
+  }
+}
+#work {
+  text-align: center;
+}
+#work .gallery {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+#work .gallery .photo-box {
+  position: relative;
+  width: 40%;
+  margin-bottom: 55px;
+}
+#work .gallery .photo-box:hover .photo-overlay,
+#work .gallery .photo-box:hover .work-image {
+  opacity: 1;
+}
+#work .gallery .photo-box .work-image {
+  display: block;
+  height: 100%;
+  opacity: 0.7;
+}
+#work .gallery .photo-box .photo-overlay {
+  bottom: 0;
+  transition: .5s ease;
+  opacity: 0;
+}
+#work .gallery .photo-box .photo-overlay .photo-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 20px;
+  padding: 20px;
+  background-color: #e84c3d;
+  background-clip: padding-box;
+  border-top: 5px solid rgba(232, 76, 61, 0.5);
+  text-align: left;
+}
+#work .gallery .photo-box .photo-overlay .photo-title .gallery-title {
+  font-family: 'Roboto Slab', serif;
+  color: #fff;
+  font-size: 17px;
+}
+#work .gallery .photo-box .photo-overlay .photo-title .gallery-subtitle {
+  font-family: 'Open Sans', sans-serif;
+  color: #963a2d;
+  font-size: 11px;
+}
+#work .gallery .photo-box .photo-overlay .photo-zoom {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: right;
+}
+#work .gallery .photo-box .photo-overlay .photo-zoom img {
+  width: 50px;
+}
+@media all and (max-width: 690px) {
+  #work .gallery .photo-box {
+    width: 80%;
+    margin-bottom: 35px;
+  }
+  #work .gallery .photo-box .photo-zoom {
+    display: none;
+  }
+}
+.view-more {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 14px 20px;
+}
+.view-more a {
+  margin: 0;
+  width: auto;
+}
+.view-more img {
+  margin: 0;
+  max-width: 18px;
+}
+#contact {
+  text-align: center;
+  padding: 75px 0;
+}
+#contact h1 {
+  font-family: 'Roboto Slab', serif;
+  color: #eb4843;
+}
+#contact form {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  flex-flow: row wrap;
+  margin: 75px auto;
+}
+#contact form input,
+#contact form textarea {
+  font-family: 'Roboto Slab', serif;
+  padding: 20px;
+  font-size: 18px;
+  background-color: #e4e8e9;
+  color: #77797a;
+  border: none;
+}
+#contact form input {
+  width: 45%;
+  margin: 0;
+}
+#contact form textarea {
+  width: 100%;
+  margin-top: 27px;
+  height: 250px;
+  resize: none;
+}
+#contact form input::placeholder,
+#contact form textarea::placeholder {
+  color: #cfd1d0;
+}
+#contact form .form-status {
+  margin: 10px 0 20px;
+  text-align: right;
+  height: 10px;
+  color: #77797a;
+  font-family: 'Roboto', sans-serif;
+}
+@media all and (max-width: 690px) {
+  #contact{
+    padding: 30px 0;
+  }
+  #contact form {
+    width: 80%;
+    margin-top: 20px;
+  }
+  #contact form input {
+    width: 49%;
+  }
+  #contact form textarea {
+    height: 200px;
+  }
+}
+footer {
+  position: relative;
+  background-color: #e84c3d;
+  padding: 111px;
+  text-align: right;
+}
+footer .social {
+  display: flex;
+  justify-content: space-between;
+  width: 63%;
+  position: absolute;
+  bottom: 130px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+footer .social img {
+  background-color: #e84c3d;
+  background-clip: padding-box;
+  border: 5px solid rgba(232, 76, 61, 0.5);
+  width: 88px;
+  max-height: 88px;
+}
+@media all and (max-width: 690px) {
+  footer {
+    margin-top: 20px;
+  }
+  footer .social {
+    width: 100%;
+  }
+}
+.menu-mobile {
+  width: 70%;
+  background-color: #e84c3d;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+  z-index: 1;
+}
+.menu-mobile .menu-button {
+  background-color: rgba(232, 76, 61, 0.5);
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+}
+.menu-mobile .menu-button img {
+  width: 20px;
+  vertical-align: middle;
+}
+.menu-mobile .links-mobile {
+  background-color: #e84c3d;
+  height: 79vh;
+  padding: 60px;
+}
+.menu-mobile .links-mobile a {
+  font-size: 18px;
+  display: block;
+  margin: 5px 0;
+}
