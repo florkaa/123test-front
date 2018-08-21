@@ -13,7 +13,7 @@ class Nav extends Component {
 	}
 	render() {
 		if (window.matchMedia("(min-width: 690px)").matches) {
-		    return (
+		    return ( 
 		      	<nav>
 			      	<p>logo</p>
 			      	<section className="links">
