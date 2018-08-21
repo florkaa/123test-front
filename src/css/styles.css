@@ -133,20 +133,16 @@ nav .links a:active {
     margin-top: 30px;
   }
 }
-#about-me,
-#work {
+#about-me{
+  margin-top: 75px;
   padding: 75px 0;
   border-bottom: 1px solid #e6e8e7;
-  min-height: 100vh;
 }
 @media all and (max-width: 690px) {
   #about-me,
   #work {
     padding: 30px 0;
   }
-}
-#about-me {
-  margin-top: 75px;
 }
 @media all and (max-width: 690px) {
   #about-me {
@@ -208,6 +204,8 @@ nav .links a:active {
 }
 #work {
   text-align: center;
+  padding: 75px 0;
+  border-bottom: 1px solid #e6e8e7;
 }
 #work .gallery {
   display: flex;
@@ -338,7 +336,7 @@ nav .links a:active {
   }
   #contact form {
     width: 80%;
-    margin-top: 20px;
+    margin: 20px auto;
   }
   #contact form input {
     width: 100%;
@@ -347,6 +345,9 @@ nav .links a:active {
   #contact form textarea {
     height: 200px;
     margin-top: 0px;
+  }
+  #contact form .form-status {
+    height: auto;
   }
 }
 footer {
@@ -405,7 +406,7 @@ footer .social img {
 }
 .menu-mobile .links-mobile {
   background-color: #e84c3d;
-  height: 79vh;
+  height: 100vh;
   padding: 60px;
 }
 .menu-mobile .links-mobile a {

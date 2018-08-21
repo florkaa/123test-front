@@ -135,11 +135,7 @@ nav{
 		margin-top: 30px;
 	}
 }
-#about-me, #work{
-	.section-separator();
-	min-height: 100vh;
-}
-#about-me{
+#about-me
 	margin-top: 75px;
 	@media @690px{
 		margin-top:0;
@@ -194,6 +190,7 @@ nav{
 	}
 }
 #work{
+	.section-separator();
 	text-align: center;
 	& .gallery{
 		.mixin-flex();
@@ -314,12 +311,15 @@ nav{
 	padding: 30px 0;
 		& form{
 			width: @general-width;
-			margin-top: 20px;
+			margin: 20px auto;
 			& input{
 	    		width: 49%;
 			}
 			& textarea{
 				height: 200px;
+			}
+			& .form-status{
+				height: auto;
 			}
 		}
 	}
@@ -376,7 +376,7 @@ footer{
 	}
 	& .links-mobile{
 		background-color: @principal-red;
-		height: 79vh;
+		height: 100vh;
 	    padding: 60px;
 		& a{
 		    font-size: 18px;
