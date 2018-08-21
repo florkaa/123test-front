@@ -341,10 +341,12 @@ nav .links a:active {
     margin-top: 20px;
   }
   #contact form input {
-    width: 49%;
+    width: 100%;
+    margin-bottom: 10px;
   }
   #contact form textarea {
     height: 200px;
+    margin-top: 0px;
   }
 }
 footer {
